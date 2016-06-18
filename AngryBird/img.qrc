@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/background.png</file>
+        <file>image/bgm.mp3</file>
+        <file>image/BlueBird.png</file>
+        <file>image/box.png</file>
+        <file>image/egg.png</file>
+        <file>image/exit.png</file>
+        <file>image/GreenBird.png</file>
+        <file>image/ground.png</file>
+        <file>image/how.png</file>
+        <file>image/icon.png</file>
+        <file>image/music.png</file>
+        <file>image/numdisplay.png</file>
+        <file>image/pause.png</file>
+        <file>image/pig1.png</file>
+        <file>image/pig2.png</file>
+        <file>image/RedBird.png</file>
+        <file>image/restart.png</file>
+        <file>image/shot.png</file>
+        <file>image/WhiteBird.png</file>
+        <file>image/woodbarh.png</file>
+        <file>image/woodbarv.png</file>
+        <file>image/YellowBird.png</file>
+        <file>image/boxsq.png</file>
+        <file>image/rocksq.png</file>
+        <file>image/BigBird.png</file>
+        <file>image/inform.png</file>
+        <file>image/BigBirds.png</file>
+        <file>image/boxf.png</file>
+        <file>image/rock.png</file>
+        <file>image/npause.png</file>
+    </qresource>
+</RCC>
