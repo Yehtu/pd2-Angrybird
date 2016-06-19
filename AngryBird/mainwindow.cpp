@@ -69,7 +69,11 @@ bool MainWindow::eventFilter(QObject *, QEvent *event)
                 if( mos->screenPos().x() > 248 && mos->screenPos().x() <= 284 )
                 {
                     if( mos->screenPos().y() > 430 && mos->screenPos().y() <= 463 )
-                    {                       
+                    {
+                        line1->setLine(-10,-10,-10,-10);
+                        line2->setLine(-10,-10,-10,-10);
+                        line1->show();
+                        line2->show();
                         ready = true;
                         return true;
                     }
@@ -133,7 +137,7 @@ bool MainWindow::eventFilter(QObject *, QEvent *event)
             {
                 if( mos->screenPos().y() > 360 && mos->screenPos().y() <= 528 )
                 {
-                    line2->setLine(mos->screenPos().x()-100,mos->screenPos().y()-100,190,331);
+                    line2->setLine(mos->screenPos().x()-100,mos->screenPos().y()-100,190,330);
                     line1->setLine(mos->screenPos().x()-100,mos->screenPos().y()-100,156,330);
                     setbird[num]->setPos(mos->screenPos().x()-112,mos->screenPos().y()-140);
                     launch = true;
