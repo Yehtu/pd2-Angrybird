@@ -2,16 +2,16 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QGraphicsScene>
-#include <QList>
+#include <QWidget>
 #include <QDesktopWidget>
+#include <QGraphicsScene>
+#include <Box2D/Box2D.h>
 #include <QTimer>
+#include <QList>
 #include <QLabel>
 #include <QPushButton>
 #include <QString>
 #include <QMessageBox>
-#include <QWidget>
-#include <Box2D/Box2D.h>
 #include <QMouseEvent>
 #include <QKeyEvent>
 #include <QMediaPlayer>
@@ -77,6 +77,8 @@ private:
     b2World *world;
     QList<GameItem *> itemList;
     QTimer timer;
+    QGraphicsLineItem *line1;
+    QGraphicsLineItem *line2;
     QMediaPlayer *bgm;
     QLabel *scoredisplay, *scoreboard, *numdisplay, *birdnum, *pause, *npause;
     QPushButton *exit, *restart, *inform, *music;

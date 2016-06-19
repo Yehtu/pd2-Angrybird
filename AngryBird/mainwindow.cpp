@@ -69,7 +69,7 @@ bool MainWindow::eventFilter(QObject *, QEvent *event)
                 if( mos->screenPos().x() > 248 && mos->screenPos().x() <= 284 )
                 {
                     if( mos->screenPos().y() > 430 && mos->screenPos().y() <= 463 )
-                    {
+                    {                       
                         ready = true;
                         return true;
                     }
@@ -133,6 +133,8 @@ bool MainWindow::eventFilter(QObject *, QEvent *event)
             {
                 if( mos->screenPos().y() > 360 && mos->screenPos().y() <= 528 )
                 {
+                    line2->setLine(mos->screenPos().x()-100,mos->screenPos().y()-100,190,331);
+                    line1->setLine(mos->screenPos().x()-100,mos->screenPos().y()-100,156,330);
                     setbird[num]->setPos(mos->screenPos().x()-112,mos->screenPos().y()-140);
                     launch = true;
                     return true;
@@ -228,8 +230,10 @@ bool MainWindow::eventFilter(QObject *, QEvent *event)
                 setbird[2]->setPixmap(b2);
                 setbird[2]->setPos(30,394);
                 scene->addItem(setbird[2]);               
-                setbird[num-1]->setPos(150,300);                
+                setbird[num-1]->setPos(150,300);
             }
+            line1->hide();
+            line2->hide();
             --num;
             birdnum->setText(QString::number(num+1));
             ready = false;
@@ -483,7 +487,10 @@ void MainWindow::killPig()
         }
     }
     if( pig0_killed == true && pig1_killed == true && pig2_killed == true )
+    {
+        score += (500 + (num+1)*100);
         killall = true;
+    }
 }
 
 void MainWindow::tick()
@@ -544,6 +551,9 @@ void MainWindow::gameInit()
     shoot->setPixmap(sh);
     shoot->setPos(150,300);
     scene->addItem(shoot);
+    // Create Line
+    line1 = scene->addLine(-10,-10,-10,-10,QPen(Qt::darkRed,4));
+    line2 = scene->addLine(-10,-10,-10,-10,QPen(Qt::darkRed,4));
 
     // Create bird
     setbird[5] = new Setbird();
